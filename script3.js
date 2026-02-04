@@ -3369,7 +3369,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const vat = round((cost + shipping) * 0.2);
       const totalCostCalc = round(cost + shipping + vat);
 
-      const salesPrice = round(unitRRP * 0.82);
+      const salesPrice = round(unitRRP * 0.85);
 
       const shortenedTitle = shortenTitle(originalTitle);
       const fullTitle = `${shortenedTitle} RRP £${Math.ceil(unitRRP)}`;
@@ -3462,7 +3462,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       // Sales Price Formula
-      const salesPriceFormula = `=ROUND(${colUnitRRP}${excelRow}*0.82,2)`;
+      const salesPriceFormula = `=ROUND(${colUnitRRP}${excelRow}*0.85,2)`;
       newWorksheet[`${colSalesPrice}${excelRow}`] = {
         t: "n",
         f: salesPriceFormula,
@@ -3684,3 +3684,4 @@ document.addEventListener("DOMContentLoaded", () => {
     preview.style.display = "block";
   }
 }); // END OF DOMContentLoaded
+
